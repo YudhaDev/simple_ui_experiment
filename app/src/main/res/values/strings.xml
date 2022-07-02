@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">simple_forms_ui</string>
+    <string-array name="jenis_kelamin">
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_forms_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/activity_forms_textview_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:text="Biodata Uniga"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_forms_imageview_userprofile"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/undraw_male_avatar_323b"
+                app:layout_constraintLeft_toLeftOf="@id/activity_forms_container_layout"
+                app:layout_constraintRight_toRightOf="@id/activity_forms_container_layout"
+                app:layout_constraintTop_toBottomOf="@id/activity_forms_textview_heading"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/activity_forms_button_ubahfoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_500"
+                android:text="Ubah Foto"
+                app:layout_constraintLeft_toLeftOf="@id/activity_forms_container_layout"
+                app:layout_constraintRight_toRightOf="@id/activity_forms_container_layout"
+                app:layout_constraintTop_toBottomOf="@id/activity_forms_imageview_userprofile" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="@id/activity_forms_container_layout"
+                app:layout_constraintRight_toRightOf="@id/activity_forms_container_layout"
+                app:layout_constraintTop_toBottomOf="@id/activity_forms_button_ubahfoto">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/activity_forms_textinputlayout_firstname"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:hint="First name"
+                        android:labelFor="@id/activity_forms_textinputedittext_firstname">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activity_forms_textinputedittext_firstname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/activity_forms_textinputlayout_lastname"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:hint="Last name"
+                        android:labelFor="@id/activity_forms_textinputedittext_lastname">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/activity_forms_textinputedittext_lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/activity_forms_textinputlayout_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:labelFor="@id/activity_forms_textinputedittext_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_forms_textinputedittext_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textWebEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/activity_forms_textinputlayout_id"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ID"
+                    android:labelFor="@id/activity_forms_textinputedittext_id">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_forms_textinputedittext_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/activity_forms_textinputlayout_namakampus"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Kampus"
+                    android:labelFor="@id/activity_forms_textinputedittext_namakampus">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_forms_textinputedittext_namakampus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/activity_forms_button_hapus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/md_red_700"
+                    android:drawableEnd="@drawable/ic_round_cancel_24"
+                    android:drawableTint="@color/white"
+                    android:text="hapus" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
